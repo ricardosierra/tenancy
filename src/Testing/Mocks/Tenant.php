@@ -37,9 +37,9 @@ class Tenant extends Model implements Contract
 
     /**
      * Goes from the current class to a different class assuming they have the same key.
-     * 
+     *
      * @param string $class
-     * 
+     *
      * @return Model
      */
     public function as(string $class)

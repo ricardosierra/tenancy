@@ -45,7 +45,7 @@ trait InteractsWithTenants
     protected function bootFactories()
     {
         Factory::guessFactoryNamesUsing(function (string $modelName) {
-            if(is_subclass_of((new $modelName), Tenant::class)) {
+            if (is_subclass_of((new $modelName()), Tenant::class)) {
                 return TenantFactory::class;
             }
 
